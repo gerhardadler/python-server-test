@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python server test</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            font-weight: bolder;
+        }
+
+        main {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Serveren kjører!</h1>
+    </main>
+    <script>
+        // change the color of main based on cursor position
+        const main = document.querySelector('main');
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            main.style.backgroundColor = `rgb(${x * 255}, ${y * 255}, ${255 - (255 * x)})`;
+        });
+    </script>
+</body>
+
+</html>
